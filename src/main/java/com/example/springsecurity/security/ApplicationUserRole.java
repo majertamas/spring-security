@@ -15,7 +15,8 @@ import static com.example.springsecurity.security.ApplicationUserPermission.STRU
 @Getter
 public enum ApplicationUserRole {
     STUDENT(Sets.newHashSet()),
-    ADMIN(Sets.newHashSet(COURSE_READ, COURSE_WRITE, STRUDENT_READ, STRUDENT_WRITE));
+    ADMIN(Sets.newHashSet(COURSE_READ, COURSE_WRITE, STRUDENT_READ, STRUDENT_WRITE)),
+    ADMIN_TRAINEE(Sets.newHashSet(COURSE_READ, STRUDENT_READ));
 
     private final Set<ApplicationUserPermission> permissions;
 }
